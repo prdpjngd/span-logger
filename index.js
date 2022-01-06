@@ -29,4 +29,4 @@ class spanReport {
 }
 
 
-module.exports = spanReport;
+module.exports = new spanReport();
