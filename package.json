@@ -1,6 +1,6 @@
 {
   "name": "span-logger",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "This Logging library provides a simple way to log messages with time spans",
   "main": "index.js",
   "scripts": {
