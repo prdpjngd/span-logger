@@ -1,32 +1,31 @@
 
 
-class spanReport {
-
+class spanLogger {
 
     constructor (){
         this.counter = 0;
         this.startTime = Date.now();
-        this.finalData = []
+        this.getLogs = []
     }
- 
-    logger (eventName){
+
+    /**
+     * This a logger function that will log the event and the time it took to execute
+     * @param {*} eventName - optional parameter that will be logged
+     */
+    log (eventName){
         this.counter += 1;
         if(!eventName){
             eventName = `EVENT-${this.counter}`;
         }
         eventName = eventName.toUpperCase();
-        this.finalData.push({
+        this.getLogs.push({
             counter: this.counter,
             eventName: eventName,
-            time: Date.now() - this.startTime
+            duration: Date.now() - this.startTime
         });
-    }
-
-    print (){
-        console.log(this.finalData);
     }
 
 }
 
 
-module.exports = new spanReport();
+module.exports = spanLogger;
